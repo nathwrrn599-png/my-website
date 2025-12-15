@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHHUB - หน้าหลัก</title>
+    <style>
+/* CSS สำหรับเว็บไซต์ฉบับง่าย */
+body { 
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    margin: 0; 
+    background-color: #f0f2f5;
+    color: #333; 
+    line-height: 1.6;
+}
+header { 
+    background-color: #2c3e50;
+    padding: 15px 0; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+}
+header h1 {
+    color: white;
+    font-size: 1.5em;
+    margin: 0;
+}
+nav ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 10px 0 0 0; 
+    display: flex; 
+    justify-content: center;
+}
+nav ul li a { 
+    color: #bdc3c7;
+    text-decoration: none; 
+    padding: 10px 20px; 
+    display: block; 
+    transition: color 0.3s; 
+    font-weight: bold;
+}
+nav ul li a:hover { 
+    color: #3498db;
+}
+main { 
+    padding: 40px 20px; 
+    max-width: 900px; 
+    margin: 30px auto; 
+    background-color: white; 
+    border-radius: 8px; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+h2 { 
+    color: #2c3e50; 
+    text-align: center; 
+    margin-bottom: 30px; 
+    border-bottom: 2px solid #3498db; 
+    padding-bottom: 10px;
+}
+button { 
+    background-color: #3498db; 
+    color: white; 
+    border: none; 
+    padding: 10px 25px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    font-size: 1em; 
+}
+button:hover { 
+    background-color: #2980b9; 
+}
+footer { 
+    background-color: #333; 
+    color: white; 
+    text-align: center; 
+    padding: 20px 0; 
+    margin-top: 40px; 
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TECHHUB</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">หน้าหลัก</a></li>
+                <li><a href="products.html">สินค้า</a></li>
+                <li><a href="about.html">เกี่ยวกับเรา</a></li>
+                <li><a href="contact.html">ติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>ยินดีต้อนรับสู่ TECHHUB</h2>
+        <p style="text-align: center;">เราคือศูนย์รวมคอมพิวเตอร์และอุปกรณ์ไอทีคุณภาพเยี่ยมสำหรับยุคดิจิทัล</p>
+        <button id="promo-button">🔥 ดูโปรโมชั่นเดือนนี้ 🔥</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TECHHUB. All rights reserved. Design by ณัฐวรรณ เขียนสันเทียะ</p>
+    </footer>
+
+    <script>
+        // JS: Alert โปรโมชั่น
+        document.getElementById('promo-button').addEventListener('click', function() {
+            alert('🎉 ลดสูงสุด 15% ตลอดเดือนนี้!');
+        });
+    </script>
+</body>
+
+</html>
