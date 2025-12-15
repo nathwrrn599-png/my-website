@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHHUB - ติดต่อเรา</title>
+<style>
+/* CSS สำหรับเว็บไซต์ฉบับง่าย */
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* ฟอนต์ดูทันสมัย */
+    margin: 0; 
+    background-color: #f0f2f5; /* พื้นหลังสีเทาอ่อนมาก */
+    color: #333; 
+    line-height: 1.6;
+}
+header { 
+    background-color: #2c3e50; /* สีกรมท่าเข้มสำหรับ Header */
+    padding: 15px 0; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+}
+header h1 {
+    color: white;
+    font-size: 1.5em;
+    margin: 0;
+}
+nav ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 10px 0 0 0; 
+    display: flex; 
+    justify-content: center;
+}
+nav ul li a { 
+    color: #bdc3c7; /* สีเทาอ่อน */
+    text-decoration: none; 
+    padding: 10px 20px; 
+    display: block; 
+    transition: color 0.3s; 
+    font-weight: bold;
+}
+nav ul li a:hover { 
+    color: #3498db; /* สีน้ำเงินสว่างเมื่อชี้ */
+}
+main { 
+    padding: 40px 20px; 
+    max-width: 900px; 
+    margin: 30px auto; 
+    background-color: white; 
+    border-radius: 8px; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* เงาที่ดูดีขึ้น */
+}
+h2 { 
+    color: #2c3e50; 
+    text-align: center; 
+    margin-bottom: 30px; 
+    border-bottom: 2px solid #3498db; 
+    padding-bottom: 10px;
+}
+button { 
+    background-color: #3498db; 
+    color: white; 
+    border: none; 
+    padding: 10px 25px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    font-size: 1em; 
+}
+button:hover { 
+    background-color: #2980b9; 
+}
+footer { 
+    background-color: #333; 
+    color: white; 
+    text-align: center; 
+    padding: 20px 0; 
+    margin-top: 40px; 
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TECHHUB</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">หน้าหลัก</a></li>
+                <li><a href="products.html">สินค้า</a></li>
+                <li><a href="about.html">เกี่ยวกับเรา</a></li>
+                <li><a href="contact.html">ติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>ติดต่อเรา</h2>
+        <form id="contact-form">
+            <label for="name">ชื่อ:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">อีเมล:</label>
+            <input type="email" id="email" required>
+
+            <label for="message">ข้อความ:</label>
+            <textarea id="message" rows="4" required></textarea>
+            
+            <button type="submit">ส่งข้อความ</button>
+            <p id="status"></p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TECHHUB. All rights reserved. Design by ณัฐวรรณ เขียนสันเทียะ</p>
+    </footer>
+
+    <script>
+        // JS: ตรวจสอบฟอร์มอย่างง่าย
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const status = document.getElementById('status');
+
+            if (name === "" || email === "") {
+                status.textContent = '❌ โปรดกรอก ชื่อ และ อีเมล ให้ครบถ้วน!';
+                status.style.color = 'red';
+            } else {
+                status.textContent = '✅ ขอบคุณค่ะ! ข้อความถูกส่งแล้ว (จำลอง)';
+                status.style.color = 'green';
+                document.getElementById('contact-form').reset();
+            }
+        });
+    </script>
+</body>
+</html>
